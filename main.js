@@ -143,7 +143,7 @@ class App {
 }
 
 class Game {
-  static TOTAL_TIME = 5000 //3 * 60 * 1000
+  static TOTAL_TIME = 3 * 60 * 1000
   static TOTAL_PAIRS = 8
   static MAX_SCORE = 1000
   static IMAGES = [
