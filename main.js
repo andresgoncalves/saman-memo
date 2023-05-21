@@ -16,19 +16,21 @@ class App {
       this.startGame()
     })
 
-    document.querySelector(".restart-button").addEventListener("click", () => {
-      this.startGame()
-    })
+    document.querySelectorAll(".restart-button").forEach(button =>
+      button.addEventListener("click", () => {
+        this.startGame()
+      })
+    )
 
     document.querySelector(".info-button").addEventListener("click", () => {
       this.showInfoView()
     })
 
-    document
-      .querySelector(".see-leaderboard-button")
-      .addEventListener("click", () => {
+    document.querySelectorAll(".see-leaderboard-button").forEach(button => {
+      button.addEventListener("click", () => {
         this.showLeaderboard()
       })
+    })
 
     document
       .querySelector(".clear-leaderboard-button")
@@ -78,6 +80,10 @@ class App {
 
   showGameView() {
     this.showView("game-view")
+  }
+
+  showGameOverView() {
+    this.showView("game-over-view")
   }
 
   showHomeView() {
@@ -137,7 +143,7 @@ class App {
 }
 
 class Game {
-  static TOTAL_TIME = 3 * 60 * 1000
+  static TOTAL_TIME = 5000 //3 * 60 * 1000
   static TOTAL_PAIRS = 8
   static MAX_SCORE = 1000
   static IMAGES = [
@@ -199,6 +205,7 @@ class Game {
 
   gameOver() {
     this.stopTimer()
+    this.app.showGameOverView()
   }
 
   flipCard(card) {
