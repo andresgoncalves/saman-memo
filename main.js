@@ -141,14 +141,14 @@ class Game {
   static TOTAL_PAIRS = 8
   static MAX_SCORE = 1000
   static IMAGES = [
-    "assets/card-1.jpg",
-    "assets/card-2.jpg",
-    "assets/card-3.jpg",
-    "assets/card-4.jpg",
-    "assets/card-5.jpg",
-    "assets/card-6.jpg",
-    "assets/card-7.jpg",
-    "assets/card-8.jpg",
+    "assets/card-1.webp",
+    "assets/card-2.webp",
+    "assets/card-3.webp",
+    "assets/card-4.webp",
+    "assets/card-5.webp",
+    "assets/card-6.webp",
+    "assets/card-7.webp",
+    "assets/card-8.webp",
   ]
 
   constructor(app, player) {
